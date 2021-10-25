@@ -1,0 +1,82 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<script>
+    function validateForm(){
+        for(g in document.querySelectorAll('crowd-radio-group')){
+            console.log(g)
+        }
+    }
+    
+    document.querySelector('crowd-form').onsubmit = function(e) {
+        if (!validateForm()) {
+            e.preventDefault();
+        }
+    }
+    </script>
+<crowd-form>
+
+    <section style="border-bottom-style: solid;padding-top: 30px;padding-bottom: 30px;">
+        <div style="margin-top: 20px;margin-bottom: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            {{question}}
+        </div>
+        <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <div>
+                {{user_proxy}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+        </div>
+        <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <div>
+                {{user_left}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+            <div>
+                {{user_right}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+        </div>
+        <crowd-radio-group style="display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <crowd-radio-button name="{{section_id}}__{{user_proxy}}__{{user_lname}}__{{user_rname}}" value="{{user_lname}}">{{user_lname}}</crowd-radio-button>
+            <crowd-radio-button name="{{section_id}}__{{user_proxy}}__{{user_lname}}__{{user_rname}}" value="{{user_rname}}">{{user_rname}}</crowd-radio-button>
+        </crowd-radio-group>
+    </section>
+
+    <section style="border-bottom-style: solid;padding-top: 30px;padding-bottom: 30px;">
+        <div style="margin: 40px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            {{question}}
+        </div>
+        <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <div>
+                {{user_proxy}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+        </div>
+        <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <div>
+                {{user_left}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+            <div>
+                {{user_right}}
+                <h1 href="{{user_url}}">{{screen_name}}</h1>
+                <img src="{{user_image}}"/>
+                <a href="{{user_url}}"> </a>
+            </div>
+        </div>
+        <crowd-radio-group style="display: flex;flex-wrap: nowrap;justify-content: space-around;">
+            <crowd-radio-button name="{{user_lname}}" value="{{user_lname}}">{{user_lname}}</crowd-radio-button>
+            <crowd-radio-button name="{{user_rname}}" value="{{user_rname}}">{{user_rname}}</crowd-radio-button>
+        </crowd-radio-group>
+    </section>
+
+
+</crowd-form>

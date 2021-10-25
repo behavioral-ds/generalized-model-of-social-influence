@@ -1,0 +1,19 @@
+<h2 style="text-align: center;" href="{{user_url}}"><a href="{{user_url}}">{{name}}</a></h2>
+<h4 style="text-align: center;" href="{{user_url}}"><a href="{{user_url}}">@{{screen_name}}</a></h4>
+<a href="{{user_url}}"><img style="max-height: 300px;min-height: 300px;display: block; margin-left: auto; margin-right: auto;" src="{{user_image}}"/></a>
+<p style="text-align: center;max-width: 600px;text-overflow: ellipsis;">{{description}}</p>
+<div style="padding: 30px;text-align: center; ">
+<!--     <div style="padding: 10px; margin: 30px; display: inline-block;*display: inline; vertical-align: top;text-align: center;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+        <h3>#Follower:</h3>
+        <h4>{{follower_count}}</h4>
+    </div> -->
+    <div style="padding: 10px; margin: 30px; display: inline-block;*display: inline; vertical-align: top;text-align: center;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+        <h3>#Followee:</h3>
+        <h4>{{friend_count}}</h4>
+    </div>
+    <div style="padding: 10px; margin: 30px; display: inline-block;*display: inline; vertical-align: top;text-align: center;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+        <h3>#Tweet:</h3>
+        <h4>{{statuses_count}}</h4>
+    </div>
+</div>
+<div style="max-height: 600px; overflow: scroll">{{user_tweets}}</div>

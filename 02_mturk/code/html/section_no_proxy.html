@@ -1,0 +1,36 @@
+<section style="border-bottom-style: solid;padding-top: 30px;padding-bottom: 30px;">
+    <div style="margin-top: 20px;margin-bottom: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <h1>
+            {{question}}
+        </h1>
+    </div>
+    <!-- <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)">
+            <h2 style="text-align: center;">Proxy User</h2>
+            {{user_proxy}}
+        </div>
+    </div> -->
+    <div style="margin-top: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <h1> 
+            <u>Select one of the two target users to answer the above question.</u>
+        </h1>
+    </div>
+    <div style="margin-bottom: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <h3>
+            Read the information for each of the users!
+        <br/>(i.e. The proxy user and the two target users)
+        </h3>
+    </div>
+    <crowd-radio-group style="display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <crowd-radio-button name="{{section_id}}_*_{{user_pname}}_*_{{user_lname}}_*_{{user_rname}}" value="{{user_lname}}"><h2>{{user_lname}}</h2></crowd-radio-button>
+        <crowd-radio-button name="{{section_id}}_*_{{user_pname}}_*_{{user_rname}}_*_{{user_lname}}" value="{{user_rname}}"><h2>{{user_rname}}</h2></crowd-radio-button>
+    </crowd-radio-group>
+    <div style="margin: 20px;display: flex;flex-wrap: nowrap;justify-content: space-around;">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)">
+            {{user_left}}
+        </div>
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)">
+            {{user_right}}
+        </div>
+    </div>
+</section>
